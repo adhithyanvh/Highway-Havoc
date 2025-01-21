@@ -7,9 +7,7 @@ public class MoveSpwnObj : MonoBehaviour
 {
     float otherCarspeed;
     public RoadMoveOnly roadMoveOnly;
-    //SCORE
-
-
+    
 
     // Start is called before the first frame update
     void Start()

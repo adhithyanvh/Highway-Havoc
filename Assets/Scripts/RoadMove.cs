@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class RoadMove : MonoBehaviour
 {
-   
+
     public GameObject point1, point2, point3, pointMain, player;
     public GameObject road1, road2, road3;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,8 +33,6 @@ public class RoadMove : MonoBehaviour
             road3.transform.position = point3.transform.position;
 
         }
-
-
 
     }
 }

@@ -1,35 +1,3 @@
-/*using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class RoadMoveOnly : MonoBehaviour
-{
-    public static RoadMoveOnly roadSpeed;
-    public float speed = 40;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(ScoreUpdater.instancee.score >= 5)
-        {
-            speed = speed + 0.005f;
-        }
-
-        transform.Translate(Vector3.back * speed * Time.deltaTime);
-
-
-        Debug.Log("Road Speed : " + speed);
-
-    }
-
-}
-*/
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
