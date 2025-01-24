@@ -8,11 +8,12 @@ using UnityEngine.SceneManagement;
 
 public class CarGarage : MonoBehaviour
 {
-    public GameObject CameraPos1,CameraPos2,CameraPos3;
+    public GameObject[] camPositions;
     public Camera myCamera;
-    public Button FirstNextButton,SecondNextButton,ThirdNextButton;
-    public Button Select1, Select2, Select3;
+    public Button nextButton;
+    public Button selectButton;
     public int carNumber;
+    public static int cameraNum;
 
     public static CarGarage instance;
 
@@ -20,102 +21,55 @@ public class CarGarage : MonoBehaviour
     void Start()
     {
         instance = this;
+        cameraNum = 0;
 
-        SecondNextButton.gameObject.SetActive(false);
-        ThirdNextButton.gameObject.SetActive(false);
-
-        Select2.gameObject.SetActive(false) ;
-        Select3.gameObject.SetActive(false);
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (cameraNum == 0)
+        {
+            myCamera.transform.position = camPositions[0].transform.position;
+
+        }
+        else if (cameraNum == 1)
+        {
+            myCamera.transform.position = camPositions[1].transform.position;
+
+        }
+        else if (cameraNum == 2)
+        {
+            myCamera.transform.position = camPositions[2].transform.position;
+
+        }
+
+        if (cameraNum == 3)
+        {
+            cameraNum = 0;
+        }
     }
 
-    //-----------NEXT BUTTONS------------
+    //Next button
 
     public void NextButton()
     {
-        
-        if (myCamera.transform.position.x <= CameraPos1.transform.position.x  && myCamera.transform.position.x < CameraPos3.transform.position.x)
-        {
-            myCamera.transform.position = CameraPos2.transform.position;
-            Debug.Log("to pos2");
-
-        }
-        FirstNextButton.gameObject.SetActive(false);
-        SecondNextButton.gameObject.SetActive(true);
-        ThirdNextButton.gameObject.SetActive(false);
-
-        Select1 .gameObject.SetActive(false);
-        Select2.gameObject.SetActive(true);
-        Select3.gameObject.SetActive(false);
-
-
-    }
-    public void NextButton2()
-    {
-
-        if (myCamera.transform.position.x <= CameraPos2.transform.position.x && myCamera.transform.position.x > CameraPos1.transform.position.x)
-        {
-            myCamera.transform.position = CameraPos3.transform.position;
-            Debug.Log("to pos3");
-
-
-        }
-        SecondNextButton.gameObject.SetActive(false);
-        FirstNextButton.gameObject.SetActive(false);
-        ThirdNextButton.gameObject.SetActive(true);
-
-        Select1.gameObject.SetActive(false);
-        Select2.gameObject.SetActive(false);
-        Select3.gameObject.SetActive(true);
-
-    }
-    public void NextButton3()
-    {
-        if (myCamera.transform.position.x == CameraPos3.transform.position.x && myCamera.transform.position.x > CameraPos1.transform.position.x)
-        {
-            myCamera.transform.position = CameraPos1.transform.position;
-            Debug.Log("to pos1");
-
-
-        }
-        FirstNextButton.gameObject.SetActive(true);
-        SecondNextButton.gameObject.SetActive(false);
-        ThirdNextButton.gameObject.SetActive(false);
-
-        Select1.gameObject.SetActive(true);
-        Select2.gameObject.SetActive(false);
-        Select3.gameObject.SetActive(false);
+        cameraNum++;
+        Debug.Log(cameraNum);
 
     }
 
-    //----------SELECT BUTTONS----------
 
-    public void SelectButton1()
+    //Select button
+
+    public void SelectButton()
     {
-        carNumber = 0;
+        carNumber = cameraNum;
         SceneManager.LoadScene(6);
         Debug.Log(carNumber);
 
     }
 
-    public void SelectButton2()
-    {
-        carNumber = 1;
-        SceneManager.LoadScene(6);
-        Debug.Log(carNumber);
 
-    }
-
-    public void SelectButton3()
-    {
-        carNumber = 2;
-        SceneManager.LoadScene(6);
-        Debug.Log(carNumber);
-    }
 }
