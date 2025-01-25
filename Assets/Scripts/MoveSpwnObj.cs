@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MoveSpwnObj : MonoBehaviour
 {
-    float otherCarspeed;
+    public float otherCarspeed;
     public RoadMoveOnly roadMoveOnly;
     
 
@@ -19,10 +19,12 @@ public class MoveSpwnObj : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(otherCarspeed * Time.deltaTime * Vector3.back);
+        otherCarspeed = UnityEngine.Random.Range(roadMoveOnly.speed - 30f , roadMoveOnly.speed + 10 );
 
-        float spawnCarSpeed = roadMoveOnly.speed;
-        otherCarspeed = spawnCarSpeed - 10f;
+        transform.Translate(otherCarspeed* Time.deltaTime * Vector3.back);
+
+        
+       
 
 
         //Debug.Log("Other Vehicles Speed =" + otherCarspeed);

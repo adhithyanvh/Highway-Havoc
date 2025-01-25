@@ -5,9 +5,9 @@ using UnityEngine;
 public class RoadMoveOnly : MonoBehaviour
 {
     public float speed = 40;
-    public float speedIncreaseRate = 0.1f; // Rate at which the speed increases
-    public float timeBetweenIncreases = 1f; // Time in seconds between speed increases
-    public float brakeFactor = 20f; // Speed reduction when the brake is applied
+    public float speedIncreaseRate = 2f; // Rate at which the speed increases
+    public float timeBetweenIncreases = 0.5f; // Time in seconds between speed increases
+    public float brakeFactor = 10f; // Speed reduction when the brake is applied
     private float timeElapsed = 0f;
 
     // Start is called before the first frame update
