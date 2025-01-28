@@ -5,8 +5,8 @@ using UnityEngine;
 public class RoadMoveOnly : MonoBehaviour
 {
     public float speed = 40;
-    public float speedIncreaseRate = 2f; // Rate at which the speed increases
-    public float timeBetweenIncreases = 0.5f; // Time in seconds between speed increases
+    public float speedIncreaseRate = 3f; // Rate at which the speed increases
+    public float timeBetweenIncreases = 0.1f; // Time in seconds between speed increases
     public float brakeFactor = 10f; // Speed reduction when the brake is applied
     private float timeElapsed = 0f;
 
@@ -37,6 +37,6 @@ public class RoadMoveOnly : MonoBehaviour
         // Move the object
         transform.Translate(Vector3.back * speed * Time.deltaTime);
 
-        Debug.Log("Road Speed : " + speed);
+        //Debug.Log("Road Speed : " + speed);
     }
 }

@@ -19,15 +19,10 @@ public class MoveSpwnObj : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        otherCarspeed = UnityEngine.Random.Range(roadMoveOnly.speed - 30f , roadMoveOnly.speed + 10 );
+        otherCarspeed = UnityEngine.Random.Range(roadMoveOnly.speed , roadMoveOnly.speed + 5 );
 
         transform.Translate(otherCarspeed* Time.deltaTime * Vector3.back);
 
-        
-       
-
-
-        //Debug.Log("Other Vehicles Speed =" + otherCarspeed);
     }
 
 

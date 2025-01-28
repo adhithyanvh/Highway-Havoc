@@ -16,11 +16,9 @@ public class OtherCarSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //InvokeRepeating(nameof(CarsSpawner), UnityEngine.Random.Range(3f,15f), UnityEngine.Random.Range(5f, 20f));
+        
+        InvokeRepeating(nameof(CarsSpawner), 1f, UnityEngine.Random.Range(2f,3f));
 
-        InvokeRepeating(nameof(CarsSpawner), 1f, UnityEngine.Random.Range(0.5f,1.5f));
-
-        //InvokeRepeating(nameof(CarsSpawner), 5f, UnityEngine.Random.Range(0, 20));
     }
 
     // Update is called once per frame
@@ -40,9 +38,9 @@ public class OtherCarSpawn : MonoBehaviour
 
         Instantiate(otherCars[index1], lanes[index2].transform.position, Quaternion.identity);
 
-        CancelInvoke("CarsSpawner");
+        //CancelInvoke("CarsSpawner");
 
-        InvokeRepeating(nameof(CarsSpawner), UnityEngine.Random.Range(0, 10), UnityEngine.Random.Range(0, 10));
+        // InvokeRepeating(nameof(CarsSpawner), UnityEngine.Random.Range(0, 10), UnityEngine.Random.Range(0, 10));
 
     }
 

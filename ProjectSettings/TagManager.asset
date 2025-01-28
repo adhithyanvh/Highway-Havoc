@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TriggerPoint
   - OtherCar
+  - Road
   layers:
   - Default
   - TransparentFX
