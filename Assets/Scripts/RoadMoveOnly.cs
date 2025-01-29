@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class RoadMoveOnly : MonoBehaviour
 {
-    public float speed = 40;
+    public float speed = 50;
     public float speedIncreaseRate = 3f; // Rate at which the speed increases
     public float timeBetweenIncreases = 0.1f; // Time in seconds between speed increases
-    public float brakeFactor = 10f; // Speed reduction when the brake is applied
+    public float brakeFactor = 5f; // Speed reduction when the brake is applied
     private float timeElapsed = 0f;
 
     // Start is called before the first frame update
@@ -31,7 +31,7 @@ public class RoadMoveOnly : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             speed -= brakeFactor * Time.deltaTime; // Apply the brake gradually
-            if (speed < 20) speed = 20; // Prevent speed from going negative
+            if (speed < 40) speed = 40; // Prevent speed from going negative
         }
 
         // Move the object
