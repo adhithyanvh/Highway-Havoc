@@ -13,6 +13,7 @@ public class OtherCarSpawn : MonoBehaviour
     public int speed;
     //public float spawnRepeat;
 
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,7 @@ public class OtherCarSpawn : MonoBehaviour
 
     void Update()
     {
+        
 
 
     }

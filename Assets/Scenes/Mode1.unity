@@ -1098,6 +1098,9 @@ MonoBehaviour:
   road3: {fileID: 1060622646}
   point1: {fileID: 626694258}
   point2: {fileID: 1386790388}
+  scoreChecker: 0
+  theScore: 0
+  isLarge: 0
 --- !u!1 &2123964420
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,7 +1509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3039411353639626884, guid: 288b77b66f29b4847b63ad006af3d577, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -358
+      value: -376
       objectReference: {fileID: 0}
     - target: {fileID: 3039411353639626884, guid: 288b77b66f29b4847b63ad006af3d577, type: 3}
       propertyPath: m_LocalRotation.w

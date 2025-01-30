@@ -81,7 +81,7 @@ PrefabInstance:
       addedObject: {fileID: 2492184304272992809}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 50f53926913170b4daab14ab08678678, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6248780223319249935}
+      addedObject: {fileID: -2158946552124774040}
     - targetCorrespondingSourceObject: {fileID: -257059046402360471, guid: 50f53926913170b4daab14ab08678678, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7725376857652266483}
@@ -121,7 +121,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.6941687, y: 1.4501151, z: 4.4244237}
   m_Center: {x: -0.030795647, y: 0.7198532, z: 0.001902556}
---- !u!114 &6248780223319249935
+--- !u!114 &-2158946552124774040
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,7 +133,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dacaa5f221041544eb95bc30695e9f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roadMoveOnly: {fileID: 455873378025041107, guid: de3c9316666e858419dcdff06de707c4, type: 3}
+  otherCarspeed: 0
+  roadMoveOnly: {fileID: 2882116384293070122, guid: 9619424e0c5bcfe4c974e66036033017, type: 3}
+  speedMultiplier: 1
 --- !u!1 &4408141590299764337 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8665363359764589531, guid: 50f53926913170b4daab14ab08678678, type: 3}

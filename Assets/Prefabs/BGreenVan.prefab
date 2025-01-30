@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100008, guid: 4779d8f90edb5844999677fca3a05e3e, type: 3}
       propertyPath: m_Name
-      value: GreenVan
+      value: BGreenVan
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: 4779d8f90edb5844999677fca3a05e3e, type: 3}
       propertyPath: m_TagString
@@ -78,10 +78,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100008, guid: 4779d8f90edb5844999677fca3a05e3e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3746430425057326702}
+      addedObject: {fileID: 7748143653271167601}
     - targetCorrespondingSourceObject: {fileID: 100008, guid: 4779d8f90edb5844999677fca3a05e3e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7748143653271167601}
+      addedObject: {fileID: -3809686460364598063}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 4779d8f90edb5844999677fca3a05e3e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3516958680169527621}
@@ -168,19 +168,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100008, guid: 4779d8f90edb5844999677fca3a05e3e, type: 3}
   m_PrefabInstance: {fileID: 5207888906866229665}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3746430425057326702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5207888906866132745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dacaa5f221041544eb95bc30695e9f85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roadMoveOnly: {fileID: 455873378025041107, guid: de3c9316666e858419dcdff06de707c4, type: 3}
 --- !u!65 &7748143653271167601
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -202,3 +189,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.1753523, y: 3.1296155, z: 6.245195}
   m_Center: {x: 0.004604167, y: 1.0648079, z: 0.09371349}
+--- !u!114 &-3809686460364598063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5207888906866132745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dacaa5f221041544eb95bc30695e9f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  otherCarspeed: 0
+  roadMoveOnly: {fileID: 2882116384293070122, guid: 9619424e0c5bcfe4c974e66036033017, type: 3}
+  speedMultiplier: 1

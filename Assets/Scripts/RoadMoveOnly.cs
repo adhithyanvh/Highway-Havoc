@@ -10,10 +10,12 @@ public class RoadMoveOnly : MonoBehaviour
     public float brakeFactor = 5f; // Speed reduction when the brake is applied
     private float timeElapsed = 0f;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -37,6 +39,6 @@ public class RoadMoveOnly : MonoBehaviour
         // Move the object
         transform.Translate(Vector3.back * speed * Time.deltaTime);
 
-        //Debug.Log("Road Speed : " + speed);
+        Debug.Log("Road Speed : " + speed);
     }
 }

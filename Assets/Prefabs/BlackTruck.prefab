@@ -78,10 +78,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 99286866f8c285b45a392bf9e5b35bd7, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5545732857057401485}
+      addedObject: {fileID: 7513570653672226867}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 99286866f8c285b45a392bf9e5b35bd7, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7513570653672226867}
+      addedObject: {fileID: 7289055827240876928}
     - targetCorrespondingSourceObject: {fileID: -5754060345647867467, guid: 99286866f8c285b45a392bf9e5b35bd7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5068826188638157472}
@@ -191,19 +191,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 99286866f8c285b45a392bf9e5b35bd7, type: 3}
   m_PrefabInstance: {fileID: 8417944340976246293}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5545732857057401485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8652507896496202564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dacaa5f221041544eb95bc30695e9f85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roadMoveOnly: {fileID: 455873378025041107, guid: de3c9316666e858419dcdff06de707c4, type: 3}
 --- !u!65 &7513570653672226867
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -225,6 +212,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.3186603, y: 2.662956, z: 7.3310575}
   m_Center: {x: -0.01662986, y: 1.3351414, z: -0.44228458}
+--- !u!114 &7289055827240876928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8652507896496202564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dacaa5f221041544eb95bc30695e9f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  otherCarspeed: 0
+  roadMoveOnly: {fileID: 2882116384293070122, guid: 9619424e0c5bcfe4c974e66036033017, type: 3}
+  speedMultiplier: 1
 --- !u!1 &9043474519997090258 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8551654070373378105, guid: 99286866f8c285b45a392bf9e5b35bd7, type: 3}
