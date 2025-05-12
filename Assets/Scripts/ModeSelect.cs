@@ -27,7 +27,7 @@ public class ModeSelect : MonoBehaviour
     }
     public void ModeTwo()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(7);
         mode = 2;
     }
 }
