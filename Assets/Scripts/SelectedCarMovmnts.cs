@@ -46,7 +46,7 @@ public class SelectedCarMovmnts : MonoBehaviour
            
                 Destroy(gameObject);
 
-                SceneManager.LoadScene(4);
+                SceneManager.LoadScene(6);
             
         }
     }

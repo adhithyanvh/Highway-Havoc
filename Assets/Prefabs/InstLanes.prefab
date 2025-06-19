@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3046719727016824068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7613853034353044688}
+  - component: {fileID: 5115400540152365830}
+  - component: {fileID: 7540910536212173253}
+  m_Layer: 0
+  m_Name: InstLanes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7613853034353044688
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3046719727016824068}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2704727553463095660}
+  - {fileID: 5852131611998057354}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5115400540152365830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3046719727016824068}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dd9897534f33234296d069f531d06e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  otherCars:
+  - {fileID: 3914689471571267333, guid: 8d6dfac1cc4987b4fb1cfd879ac39e3f, type: 3}
+  - {fileID: 8652507896496202564, guid: 84c97feb826523e4d82826690856dadc, type: 3}
+  - {fileID: 3409242730997601164, guid: 9e6e3095c61647c4b953072cd469b963, type: 3}
+  - {fileID: 5207888906866132745, guid: 8aeb38e5647926b4e9e5d6d68d0fa4b6, type: 3}
+  lanes:
+  - {fileID: 6611769263179534418}
+  - {fileID: 5465065671784394122}
+  speed: 20
+--- !u!114 &7540910536212173253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3046719727016824068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98bbf8ebe5a25b144aa234d59a9f5494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  otherCars:
+  - {fileID: 3914689471571267333, guid: 8d6dfac1cc4987b4fb1cfd879ac39e3f, type: 3}
+  - {fileID: 8652507896496202564, guid: 84c97feb826523e4d82826690856dadc, type: 3}
+  - {fileID: 3409242730997601164, guid: 9e6e3095c61647c4b953072cd469b963, type: 3}
+  - {fileID: 5207888906866132745, guid: 8aeb38e5647926b4e9e5d6d68d0fa4b6, type: 3}
+  lanes:
+  - {fileID: 5465065671784394122}
+  - {fileID: 6611769263179534418}
+  speed: 0
+  inLaneTwo: 0
+--- !u!1 &5465065671784394122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2704727553463095660}
+  m_Layer: 0
+  m_Name: Lane2Pos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2704727553463095660
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5465065671784394122}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.46, y: 0, z: 263.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7613853034353044688}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6611769263179534418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5852131611998057354}
+  m_Layer: 0
+  m_Name: Lane1Pos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5852131611998057354
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6611769263179534418}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 7.65, y: 0, z: 287.61}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7613853034353044688}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}

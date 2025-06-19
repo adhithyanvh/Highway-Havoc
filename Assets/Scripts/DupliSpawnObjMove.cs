@@ -1,34 +1,40 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DupliSpawnObjMove : MonoBehaviour
 {
-    public float otherCarSpeed;
-    public DupliRoadMoveOnly roadMove;
-  
+ 
+        public float otherCarSpeed;
+        public RoadMoveOnly roadMoveOnly;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+        public bool isRightLane; 
 
-    // Update is called once per frame
-    void Update()
-    {
-        /*transform.Translate(Vector3.forward * speed*5 * Time.deltaTime);
-        speed = speed + 0.0001f;
-*/
-        /*if (ScoreUpdater.instancee.score >= 5 && DupliRoadMoveOnly.instanceee.speed >30)
+        public int speedMultiplier = 1;
+
+        void Update()
         {
-            speed = speed + 0.001f;
+            if (roadMoveOnly.speed >= 55)
+            {
+                speedMultiplier = 3;
+            }
+
+            otherCarSpeed = UnityEngine.Random.Range(roadMoveOnly.speed, roadMoveOnly.speed * speedMultiplier);
+
+            // Right(toward the player)
+            if (isRightLane)
+            {
+                transform.Translate(Vector3.forward * otherCarSpeed * 2 * Time.deltaTime);
+            }
+            else // Left (away from player)
+            {
+                transform.Translate(Vector3.back * otherCarSpeed * Time.deltaTime);
+            }
         }
-        */
-        float spawnCarSpeed = roadMove.speed;
-        otherCarSpeed = -spawnCarSpeed;
+    
 
-        transform.Translate(otherCarSpeed * Time.deltaTime * Vector3.back);
 
-    }
+
+
 }

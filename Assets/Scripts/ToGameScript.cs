@@ -18,16 +18,16 @@ public class ToGameScript : MonoBehaviour
     }
     public void PlayScene()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
     public void CarSelectScene()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
 
     }
 
     public void TwoLaneScene()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
 }

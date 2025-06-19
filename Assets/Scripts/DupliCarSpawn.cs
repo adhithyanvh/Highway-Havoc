@@ -7,20 +7,19 @@ using UnityEngine;
 public class DupliCarSpawn : MonoBehaviour
 {
     public GameObject[] otherCars;
-    public GameObject[] otherCarsOpp;
-
     public GameObject[] lanes;
     int index1, index2;
     int rand1, rand2;
     public int speed;
+    public bool inLaneTwo;
+    //public float spawnRepeat;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating(nameof(CarsSpawner),1f, UnityEngine.Random.Range(0, 10));
 
-        InvokeRepeating(nameof(CarSpawnerOpp), 3f, UnityEngine.Random.Range(0, 15));
-
+        InvokeRepeating(nameof(CarsSpawner), 1f, UnityEngine.Random.Range(2f, 3f));
 
     }
 
@@ -30,32 +29,26 @@ public class DupliCarSpawn : MonoBehaviour
 
     void Update()
     {
-       
 
     }
 
-    public void CarsSpawner()
-    {
-        index1 = UnityEngine.Random.Range(0, otherCars.Length);
-        Instantiate(otherCars[index1], lanes[1].transform.position, Quaternion.identity);
+        public void CarsSpawner()
+        {
+            index1 = UnityEngine.Random.Range(0, otherCars.Length);
+            index2 = UnityEngine.Random.Range(0, lanes.Length);
 
-        CancelInvoke("CarsSpawner");
+            GameObject spawnedCar = Instantiate(otherCars[index1], lanes[index2].transform.position, lanes[index2].transform.rotation);
 
-        InvokeRepeating(nameof(CarsSpawner), UnityEngine.Random.Range(0, 10), UnityEngine.Random.Range(0, 10));
+            DupliSpawnObjMove carMovement = spawnedCar.GetComponent<DupliSpawnObjMove>();
 
-    }
+            //which lane car is in
+            if (carMovement != null)
+            {
+                carMovement.isRightLane = (index2 == 1); // true = lane 2 (right), false = lane 1 (left)
+            }
+        }
 
-    public void CarSpawnerOpp()
-    {
-        index2 = UnityEngine.Random.Range(0, otherCars.Length);
-        Instantiate(otherCarsOpp[index2], lanes[0].transform.position, Quaternion.Euler(0, 180, 0));
-
-        CancelInvoke("CarSpawnerOpp");
-
-        //Invoke(nameof(CarSpawnerOpp), UnityEngine.Random.Range(0, 10));
-
-        InvokeRepeating(nameof(CarSpawnerOpp), UnityEngine.Random.Range(0, 15), UnityEngine.Random.Range(0, 10));
 
     }
 
-}
+

@@ -66,7 +66,7 @@ public class CarGarage : MonoBehaviour
     public void SelectButton()
     {
         carNumber = cameraNum;
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(3);
         Debug.Log(carNumber);
 
     }
