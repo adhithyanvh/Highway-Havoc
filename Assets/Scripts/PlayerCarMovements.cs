@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
@@ -50,8 +51,12 @@ public class PlayerCarMovements : MonoBehaviour
     {
         if (other.gameObject.CompareTag("OtherCar"))
         {
+
             Destroy(gameObject);
+          
             Debug.Log("Car hit!");
         }
     }
+
+    
 }

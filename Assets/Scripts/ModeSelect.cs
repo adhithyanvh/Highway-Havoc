@@ -21,13 +21,13 @@ public class ModeSelect : MonoBehaviour
 
     public void ModeOne()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(3);
         mode = 1;
 
     }
     public void ModeTwo()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(4);
         mode = 2;
     }
 }
